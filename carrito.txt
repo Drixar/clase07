@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "carritoTimestamP": 1667051288585,
+    "producto": {
+      "productoTimestamP": 1667051288585
+    }
+  },
+  {
+    "id": 2,
+    "carritoTimestamP": 1667051354376,
+    "producto": {
+      "productoTimestamP": 1667051354376
+    }
+  },
+  {
+    "id": 3,
+    "carritoTimestamP": 1667051420148,
+    "producto": {
+      "productoTimestamP": 1667051420148
+    }
+  },
+  {
+    "id": 4,
+    "carritoTimestamP": 1667051480862,
+    "producto": {
+      "productoTimestamP": 1667051480862
+    }
+  },
+  {
+    "id": 5,
+    "carritoTimestamP": 1667051530566,
+    "producto": {
+      "productoTimestamP": 1667051530566
+    }
+  },
+  {
+    "id": 6,
+    "carritoTimestamP": 1667051555929,
+    "producto": {
+      "productoTimestamP": 1667051555929,
+      "id": 2,
+      "title": "Calculadora",
+      "price": "45",
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png"
+    }
+  }
+]
