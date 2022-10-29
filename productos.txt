@@ -28,5 +28,11 @@
     "title": "Birome",
     "price": "20",
     "thumbnail": "https://media.istockphoto.com/vectors/ballpoint-pen-icon-flat-design-vector-id1269454123?b=1&k=20&m=1269454123&s=170x170&h=3-24yfX1RsCDl7FxgL3CecoKWBwPVhOZq9SLDO2eH08="
+  },
+  {
+    "id": 8,
+    "title": "Mouse",
+    "price": "106",
+    "thumbnail": "https://cdn0.iconfinder.com/data/icons/digital-marketing-2-12/50/121-64.png"
   }
 ]

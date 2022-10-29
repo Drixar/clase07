@@ -16,7 +16,8 @@ cartRouter.get("/",async(req,res)=>{
     }
 })
 
-cartRouter.get("/detalle/:id", async(req,res)=>{
+
+cartRouter.get("/:id", async(req,res)=>{
     const {id} = req.params;
     const carrito = await contenedorCarrito.getById(parseInt(id));
     if(carrito){
@@ -31,18 +32,28 @@ cartRouter.get("/detalle/:id", async(req,res)=>{
     }
 })
 
+// Crea un nuevo carrito
 cartRouter.post("/",async(req,res)=>{
     const carrito = req.body;
     const carritos = await contenedorCarrito.save(carrito);
-    // falta implementar
-    // res.render('cart', { carritos: carritos })
     console.log(carritos)
     res.status(200).send("Todo OK")
 })
 
+
+// Agrega un producto en carrito existente
 cartRouter.post("/:id", async(req,res)=>{
     const {id} = req.params;
-    const carrito = req.body;
+    const producto = req.body;
+    const carrito = await contenedorCarrito.getById(parseInt(id));
+    console.log(carrito.producto);
+    nuevoProducto = {
+        productoTimestamP: Date.now(),
+        ...producto
+    }
+    console.log(nuevoProducto);
+    carrito.producto.push(nuevoProducto)
+    console.log(carrito.producto)
     const carritos = await contenedorCarrito.updateById(parseInt(id),carrito);
     // falta implementar
     // res.render('cart', { carritos: carritos })
@@ -50,6 +61,7 @@ cartRouter.post("/:id", async(req,res)=>{
     res.status(200).send("Todo OK")
 })
 
+// modifica un carrito determinado por el parametro suministrado
 cartRouter.put("/:id", async(req,res)=>{
     const {id} = req.params;
     const carrito = req.body;
@@ -60,6 +72,7 @@ cartRouter.put("/:id", async(req,res)=>{
     })
 })
 
+// borra un carrito determinado por el parametro suministrado
 cartRouter.delete("/:id", async(req,res)=>{
     const {id} = req.params;
     const carritos = await contenedorCarrito.deleteById(parseInt(id));

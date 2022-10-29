@@ -14,24 +14,23 @@ class CartContainer{
                 const newcarrito={
                     id: lastIdAdded+1,
                     carritoTimestamP: Date.now(),
-                    producto: {
+                    producto: [{
                         productoTimestamP: Date.now(),
                         ...product
-                    }
+                    }]
                 }
                 carritos.push(newcarrito);
                 await fs.promises.writeFile(this.nameFile, JSON.stringify(carritos, null, 2))
                 return carritos;
             } else{
                 // si el archivo no existe
-                const carritos = await this.getAll();
                 const newcarrito={
                     id: 1,
                     carritoTimestamP: Date.now(),
-                    producto: {
+                    producto: [{
                         productoTimestamP: Date.now(),
                         ...product
-                    }
+                    }]
                 }
                 //creamos el archivo
                 await fs.promises.writeFile(this.nameFile, JSON.stringify([newcarrito], null, 2));
@@ -86,11 +85,11 @@ class CartContainer{
         try {
             const carritos = await this.getAll();
             const carrtotPos = carritos.findIndex(elm=>elm.id === id);
-            productos[carrtotPos] = {
+            carritos[carrtotPos] = {
                 id:id,
                 ...body
             };
-            await fs.promises.writeFile(this.nameFile, JSON.stringify(productos, null, 2))
+            await fs.promises.writeFile(this.nameFile, JSON.stringify(carritos, null, 2))
             return await this.getAll();
         } catch (error) {
             console.log(error)

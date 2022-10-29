@@ -4,16 +4,14 @@ const productsRouter = express.Router();
 
 const contenedorProductos = new Contenedor("productos.txt");
 
-productsRouter.use ((req, res, next) =>{
-    req.role = "User"
-    if (req.role != "Admin"){
-        // res.status(401).send("No está Autorizado")
-        
-        // cuando el usuario no es "Admin" esta línea da error. 
-        // pero no sé cpomo solucionarlo
-        res.render("/usuarios"); 
+productsRouter.use((req, res, next)  =>{
+    if (req.body.role == "admin"){
+        console.log("Usuario Administrador");
+        next();
+    } else {
+        console.log("Usuario NO ES Administrador");
+        res.status(401).send("No está Autorizado")
     }
-    next();
 })
 
 productsRouter.get("/",async(req,res)=>{
@@ -55,8 +53,8 @@ productsRouter.get("/detalle/:id", async(req,res)=>{
 })
 
 productsRouter.post("/",async(req,res)=>{
-    const newProduct = req.body;
-    const productos = await contenedorProductos.save(newProduct);
+    console.log(req.body.producto);
+    const productos = await contenedorProductos.save(req.body.producto);
     res.render('products', { products: productos})
 })
 

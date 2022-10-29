@@ -1,48 +1,28 @@
 [
   {
     "id": 1,
-    "carritoTimestamP": 1667051288585,
-    "producto": {
-      "productoTimestamP": 1667051288585
-    }
+    "carritoTimestamP": 1667083596191,
+    "producto": [
+      {
+        "productoTimestamP": 1667083596191,
+        "id": 8,
+        "title": "Mouse",
+        "price": "106",
+        "thumbnail": "https://cdn0.iconfinder.com/data/icons/digital-marketing-2-12/50/121-64.png"
+      }
+    ]
   },
   {
     "id": 2,
-    "carritoTimestamP": 1667051354376,
-    "producto": {
-      "productoTimestamP": 1667051354376
-    }
-  },
-  {
-    "id": 3,
-    "carritoTimestamP": 1667051420148,
-    "producto": {
-      "productoTimestamP": 1667051420148
-    }
-  },
-  {
-    "id": 4,
-    "carritoTimestamP": 1667051480862,
-    "producto": {
-      "productoTimestamP": 1667051480862
-    }
-  },
-  {
-    "id": 5,
-    "carritoTimestamP": 1667051530566,
-    "producto": {
-      "productoTimestamP": 1667051530566
-    }
-  },
-  {
-    "id": 6,
-    "carritoTimestamP": 1667051555929,
-    "producto": {
-      "productoTimestamP": 1667051555929,
-      "id": 2,
-      "title": "Calculadora",
-      "price": "45",
-      "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png"
-    }
+    "carritoTimestamP": 1667083711995,
+    "producto": [
+      {
+        "productoTimestamP": 1667083711995,
+        "id": 8,
+        "title": "Mouse",
+        "price": "106",
+        "thumbnail": "https://cdn0.iconfinder.com/data/icons/digital-marketing-2-12/50/121-64.png"
+      }
+    ]
   }
 ]
